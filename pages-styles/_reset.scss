@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+  font-family: "Cairo", sans-serif !important;
+  color: white !important;
+  background-color: #010101 !important;
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+ul {
+  list-style: none !important;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+// start side-line
+.side-line {
+  width: 4em;
+  position: fixed;
+  z-index: 99;
+  left: 0.5vw;
+  bottom: 110vh;
+  transition: bottom 0.1s ease;
+  animation: line-with-circul 5s ease forwards;
+
+  .circul {
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    left: 0;
+    bottom: 1em;
+    cursor: pointer;
+    animation: phone-line 2s ease;
+
+    &.phone {
+      bottom: 5.5em;
+      animation: whatsapp-line 2s ease;
+    }
+
+    a {
+      display: block;
+      height: 60px;
+      width: 60px;
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .main-line {
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 2;
+    width: 110vh;
+    height: auto;
+    position: relative;
+    bottom: 6vh;
+    left: 50%;
+    transform-origin: center left;
+    transform: rotate(-90deg);
+
+    .line {
+      flex: 1 0;
+      height: 0.1rem;
+      background-color: #777;
+      margin: auto 0.5rem auto 0rem;
+    }
+
+    .inline-text {
+      letter-spacing: 0.5rem;
+      z-index: 2;
+      color: #fff;
+      font-family: "Metropolis-Light";
+      text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    }
+  }
+}
+
+@keyframes line-with-circul {
+  0% {
+  }
+  100% {
+    transform: translateY(111vh);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    height: 60px;
+    width: 60px;
+  }
+  100% {
+    height: 80px;
+    width: 80px;
+  }
+}
+
+// end side-line
