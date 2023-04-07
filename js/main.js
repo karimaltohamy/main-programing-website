@@ -9,3 +9,39 @@ btnMenu.addEventListener("click", () => {
 btnClose.addEventListener("click", () => {
   menu.classList.remove("active");
 });
+
+// swiper
+
+window.addEventListener("resize", () => {
+  if (innerWidth < 420) {
+    const swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      mousewheel: true,
+      loop: true,
+      autoplay: {
+        delay: 2000,
+      },
+    });
+  } else if (innerWidth < 768) {
+    const swiper = new Swiper(".mySwiper", {
+      slidesPerView: 4,
+      spaceBetween: 30,
+      mousewheel: true,
+      loop: true,
+      autoplay: {
+        delay: 2500,
+      },
+    });
+  }
+});
+
+const swiper = new Swiper(".mySwiper", {
+  slidesPerView: 7,
+  spaceBetween: 30,
+  mousewheel: true,
+  loop: true,
+  autoplay: {
+    delay: 2500,
+  },
+});
