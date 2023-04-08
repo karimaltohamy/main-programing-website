@@ -11,7 +11,6 @@ btnClose.addEventListener("click", () => {
 });
 
 // swiper
-
 window.addEventListener("resize", () => {
   if (innerWidth < 420) {
     const swiper = new Swiper(".mySwiper", {
@@ -45,3 +44,29 @@ const swiper = new Swiper(".mySwiper", {
     delay: 2500,
   },
 });
+
+if (innerWidth < 420) {
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    mousewheel: true,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+    },
+  });
+}
+
+// openTab
+
+function openTab(link, id) {
+  const tabLinks = document.querySelectorAll(".tabcontent");
+  const links = document.querySelectorAll(".tablink");
+  const tabLink = document.getElementById(id);
+  const linkItem = document.getElementById(link);
+
+  tabLinks.forEach((item) => item.classList.remove("active"));
+  links.forEach((item) => item.classList.remove("active"));
+  tabLink.classList.add("active");
+  linkItem.classList.add("active");
+}

@@ -6,11 +6,16 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   scroll-behavior: smooth;
   font-family: "Cairo", sans-serif !important;
   color: white !important;
   background-color: #010101 !important;
+  overflow-x: hidden;
 }
 
 a {
@@ -30,7 +35,7 @@ p {
 .side-line {
   width: 4em;
   position: fixed;
-  z-index: 99;
+  z-index: 9999;
   left: 0.5vw;
   bottom: 110vh;
   transition: bottom 0.1s ease;

@@ -36,6 +36,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
+    <!-- aos animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <!-- start header -->
@@ -125,24 +127,26 @@
     <div class="we-are">
       <div class="container-fluid">
         <div class="omg">
-          <h2 class="we">WE</h2>
-          <div class="bold">
+          <h2 class="we" data-aos="fade-right">WE</h2>
+          <div class="bold" data-aos="fade-right">
             <h2 class="develop">DEVELOP</h2>
           </div>
-          <div class="slot-word">5 Code</div>
-          <div class="light"><h2 class="mobile">MOBILE APP</h2></div>
+          <div class="slot-word" data-aos="zoom-in">5 Code</div>
+          <div class="light" data-aos="fade-left">
+            <h2 class="mobile">MOBILE APP</h2>
+          </div>
         </div>
-        <h4 class="omg-h4">
+        <h4 class="omg-h4" data-aos="fade-up">
           5 Code is one of the most reputable website and mobile application
           development companies in Dubai.
         </h4>
-        <p class="omg-desc">
+        <p class="omg-desc" data-aos="fade-left">
           The studio was founded by a French team and now benefits from the
           knowledge, skills and expertise of a multinational team. As such, we
           specialize in web development, mobile app development and UX/UI design
           for startups and businesses.
         </p>
-        <a href="#" class="read-more">
+        <a href="#" class="read-more" data-aos="zoom-in">
           <span class="text">LIRE PLUS</span>
           <span class="circul"><i class="bx bx-right-arrow-alt"></i></span>
         </a>
@@ -255,7 +259,7 @@
     <!-- end services -->
 
     <!-- start trust us -->
-    <div class="trust-us">
+    <div class="trust-us" data-aos="zoom-in">
       <div class="container">
         <div class="content">
           <h1 class="title">THEY TRUST US</h1>
@@ -312,7 +316,7 @@
       <div class="container">
         <div class="line">
           <div class="text">
-            <span class="subtitle">WHY CHOOSE US?</span>
+            <span class="subtitle">OUR FEATURES</span>
             <h2 class="title">A Fresh Approach to Delivery Operations</h2>
             <p class="desc">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa
@@ -327,34 +331,493 @@
         </div>
       </div>
 
-      <div class="waveWrapper waveAnimation">
-        <div class="waveWrapperInner bgTop">
-          <div
-            class="wave waveTop"
-            style="
-              background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png');
-            "
-          ></div>
-        </div>
-        <div class="waveWrapperInner bgMiddle">
-          <div
-            class="wave waveMiddle"
-            style="
-              background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png');
-            "
-          ></div>
-        </div>
-        <div class="waveWrapperInner bgBottom">
-          <div
-            class="wave waveBottom"
-            style="
-              background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png');
-            "
-          ></div>
-        </div>
+      <div>
+        <svg
+          class="waves"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28"
+          preserveAspectRatio="none"
+          shape-rendering="auto"
+        >
+          <defs>
+            <path
+              id="gentle-wave"
+              d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+            />
+          </defs>
+          <g class="parallax">
+            <use
+              xlink:href="#gentle-wave"
+              x="48"
+              y="0"
+              fill="rgba(255,255,255,0.7"
+            />
+            <use
+              xlink:href="#gentle-wave"
+              x="48"
+              y="3"
+              fill="rgba(255,255,255,0.5)"
+            />
+            <use
+              xlink:href="#gentle-wave"
+              x="48"
+              y="5"
+              fill="rgba(255,255,255,0.3)"
+            />
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+          </g>
+        </svg>
       </div>
     </div>
     <!-- end featured -->
+
+    <!-- start our process  -->
+    <div class="our-process">
+      <div class="container">
+        <h1 class="title">OUR PROCESS</h1>
+        <div class="line">
+          <div class="left">
+            <ul class="links">
+              <li
+                id="link1"
+                class="tablink active"
+                onmouseover="openTab('link1', 'tab1')"
+              >
+                <img
+                  class="img-link1"
+                  src="images/our-process-1_xfnk5w.webp"
+                  alt=""
+                />
+                <img
+                  class="img-link2"
+                  src="images/our-process-colored-1_iqhdkr.webp"
+                  alt=""
+                />
+                <span>Conception</span>
+              </li>
+              <li
+                id="link2"
+                class="tablink"
+                onmouseover="openTab('link2', 'tab2')"
+              >
+                <img
+                  class="img-link1"
+                  src="images/our-process-2_mgc80f.webp"
+                  alt=""
+                />
+                <img
+                  class="img-link2"
+                  src="images/our-process-colored-2_rbtht4.webp"
+                  alt=""
+                />
+                <span>Website, App Security Protocols</span>
+              </li>
+              <li
+                id="link3"
+                class="tablink"
+                onmouseover="openTab('link3', 'tab3')"
+              >
+                <img
+                  class="img-link1"
+                  src="images/our-process-3_xmm9xb.webp"
+                  alt=""
+                />
+                <img
+                  class="img-link2"
+                  src="images/our-process-colored-3_nvbous.webp"
+                  alt=""
+                />
+                <span>UI/UX Ergonomics</span>
+              </li>
+              <li
+                id="link4"
+                class="tablink"
+                onmouseover="openTab('link4', 'tab4')"
+              >
+                <img
+                  class="img-link1"
+                  src="images/our-process-4_phpn5i.webp"
+                  alt=""
+                />
+                <img
+                  class="img-link2"
+                  src="images/our-process-colored-4_iinjwt.webp"
+                  alt=""
+                />
+                <span>Agile Sprint</span>
+              </li>
+              <li
+                id="link5"
+                class="tablink"
+                onmouseover="openTab('link5', 'tab5')"
+              >
+                <img
+                  class="img-link1"
+                  src="images/our-process-5_q9ebx3.webp"
+                  alt=""
+                />
+                <img
+                  class="img-link2"
+                  src="images/our-process-colored-5_bctmzj.webp"
+                  alt=""
+                />
+                <span>Launching</span>
+              </li>
+              <li
+                id="link6"
+                class="tablink"
+                onmouseover="openTab('link6', 'tab6')"
+              >
+                <img
+                  class="img-link1"
+                  src="images/our-process-6_jik8vr.webp"
+                  alt=""
+                />
+                <img
+                  class="img-link2"
+                  src="images/our-process-colored-6_t1dwzj.webp"
+                  alt=""
+                />
+                <span>Loyalty Maintenance Program</span>
+              </li>
+            </ul>
+          </div>
+          <div class="right">
+            <div id="tab1" class="tabcontent active">
+              <h3 class="title-box">
+                <img src="images/our-process-colored-1_iqhdkr.webp" alt="" />
+                Conception
+              </h3>
+              <p class="desc">
+                The fruit of our collaboration is still growing at DA Studio we
+                are keen to offer our partners, the best post-development
+                services Developing a flawless website. web app, Mobile
+                application as an appreciation for choosing us.
+              </p>
+            </div>
+            <div id="tab2" class="tabcontent">
+              <h3 class="title-box">
+                <img src="images/our-process-colored-2_rbtht4.webp" alt="" />
+                Website, App Security Protocols:
+              </h3>
+              <p class="desc">
+                The fruit of our collaboration is still growing at DA Studio we
+                are keen to offer our partners, the best post-development
+                services Developing a flawless website. web app, Mobile
+                application as an appreciation for choosing us.
+              </p>
+            </div>
+            <div id="tab3" class="tabcontent">
+              <h3 class="title-box">
+                <img src="images/our-process-colored-3_nvbous.webp" alt="" />
+                UI/UX Ergonomics:
+              </h3>
+              <p class="desc">
+                The fruit of our collaboration is still growing at DA Studio we
+                are keen to offer our partners, the best post-development
+                services Developing a flawless website. web app, Mobile
+                application as an appreciation for choosing us.
+              </p>
+            </div>
+            <div id="tab4" class="tabcontent">
+              <h3 class="title-box">
+                <img src="images/our-process-colored-4_iinjwt.webp" alt="" />
+                Agile Sprint:
+              </h3>
+              <p class="desc">
+                The fruit of our collaboration is still growing at DA Studio we
+                are keen to offer our partners, the best post-development
+                services Developing a flawless website. web app, Mobile
+                application as an appreciation for choosing us.
+              </p>
+            </div>
+            <div id="tab5" class="tabcontent">
+              <h3 class="title-box">
+                <img src="images/our-process-colored-5_bctmzj.webp" alt="" />
+                Launching:
+              </h3>
+              <p class="desc">
+                The fruit of our collaboration is still growing at DA Studio we
+                are keen to offer our partners, the best post-development
+                services Developing a flawless website. web app, Mobile
+                application as an appreciation for choosing us.
+              </p>
+            </div>
+            <div id="tab6" class="tabcontent">
+              <h3 class="title-box">
+                <img src="images/our-process-colored-6_t1dwzj.webp" alt="" />
+                Loyalty Maintenance Program:
+              </h3>
+              <p class="desc">
+                The fruit of our collaboration is still growing at DA Studio we
+                are keen to offer our partners, the best post-development
+                services Developing a flawless website. web app, Mobile
+                application as an appreciation for choosing us.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="animation">
+        <img class="paper-plane" src="images/fly.png" alt="paper-plane" />
+      </section>
+    </div>
+    <!-- end our process  -->
+
+    <!-- start why choose us -->
+    <div class="why-choose-us">
+      <div class="container">
+        <div class="boxs">
+          <div class="box">
+            <div class="image">
+              <img src="images/choose-us-1.jpeg" alt="" />
+            </div>
+
+            <div class="text">
+              <h1 class="title">COST EFFECTIVE</h1>
+              <p class="desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repudiandae iure corporis qui reprehenderit cupiditate nostrum
+                obcaecati ut maxime
+              </p>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="image">
+              <img src="images/choose-us-2.jpeg" alt="" />
+            </div>
+
+            <div class="text">
+              <h1 class="title">FAST RELIABLE</h1>
+              <p class="desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repudiandae iure corporis qui reprehenderit cupiditate nostrum
+                obcaecati ut maxime
+              </p>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="image">
+              <img src="images/choose-us-3.webp" alt="" />
+            </div>
+
+            <div class="text">
+              <h1 class="title">FREE RANGING</h1>
+              <p class="desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repudiandae iure corporis qui reprehenderit cupiditate nostrum
+                obcaecati ut maxime
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="glowing">
+        <span style="--i: 1"></span>
+
+        <span style="--i: 2"></span>
+
+        <span style="--i: 3"></span>
+      </div>
+
+      <div class="glowing">
+        <span style="--i: 1"></span>
+
+        <span style="--i: 2"></span>
+
+        <span style="--i: 3"></span>
+      </div>
+
+      <div class="glowing">
+        <span style="--i: 1"></span>
+
+        <span style="--i: 2"></span>
+
+        <span style="--i: 3"></span>
+      </div>
+
+      <div class="glowing">
+        <span style="--i: 1"></span>
+
+        <span style="--i: 2"></span>
+
+        <span style="--i: 3"></span>
+      </div>
+
+      <div class="glowing">
+        <span style="--i: 1"></span>
+
+        <span style="--i: 2"></span>
+
+        <span style="--i: 3"></span>
+      </div>
+
+      <div class="glowing">
+        <span style="--i: 1"></span>
+
+        <span style="--i: 2"></span>
+
+        <span style="--i: 3"></span>
+      </div>
+    </div>
+    <!-- end  why choose us -->
+
+    <!-- start contact-us -->
+    <div class="contact-us">
+      <div class="container">
+        <div class="content">
+          <div class="left">
+            <h1 class="title-left">Let's meet for a coffee?</h1>
+            <form action="">
+              <input type="text" placeholder="Full Name" />
+              <input type="email" placeholder="Email" />
+              <input type="text" placeholder="Company" />
+              <input type="number" placeholder="Phone Number" />
+              <select name="" id="">
+                <option value="">I'm interested</option>
+                <option value="">Website Design & Development</option>
+                <option value="">Mobile Application</option>
+                <option value="">Social Media</option>
+                <option value="">UX / UI Design</option>
+                <option value="">Dedicated Resource</option>
+                <option value="">Other</option>
+              </select>
+              <textarea name="" placeholder="Message"></textarea>
+              <button class="btn-form">SEND</button>
+            </form>
+          </div>
+
+          <div class="right">
+            <h2 class="title-right">CONTACT</h2>
+            <p class="desc">
+              Hi there! How can we help you? Drop us message about your
+              projects.
+            </p>
+            <div class="info">
+              <li>
+                <span>A</span>
+                <p>UAE : Dtec, Silicon Oasis Dubai</p>
+              </li>
+              <li>
+                <span>E</span>
+                <p>owner@5code.net</p>
+              </li>
+              <li>
+                <span>T</span>
+                <p>PS: +971554860049</p>
+              </li>
+            </div>
+            <div class="social-media">
+              <a href="#">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+    <!-- end contact-us -->
+
+    <!-- start techs -->
+    <div class="techs">
+      <h2 class="title">Experts in Your Platforms and More.</h2>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="images/html-5_pyqmke.webp" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/javascript_kdj1sj.webp" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/ios-bw_e2mi24.webp" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/react-native-bw_svzjul.webp" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/mysql-bw_r1kbxf.webp" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/node-bw_c4dyqm.webp" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/wordpress-bw_e7alvf.webp" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/php-bw_tiifmw.webp" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end techs -->
+
+    <!-- start footer -->
+    <footer>
+      <div class="container">
+        <div class="row line">
+          <div class="col-12 col-md-5">
+            <img src="images/logo.png" alt="" />
+            <p>
+              This is the place where you get in <br />touch and we make amazing
+              things <br />happen!
+            </p>
+          </div>
+          <div class="col-12 col-md-3">
+            <div class="links">
+              <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#we-are">WE ARE</a></li>
+                <li><a href="#our-sevices">OUR SERVICES</a></li>
+                <li><a href="#portfilio">PORTFOLIO</a></li>
+                <li>
+                  <a href="https://dubaiappstudio.ae/case-study">CASESTUDY</a>
+                </li>
+                <li><a href="#contact-us">CONTACT</a></li>
+                <li>
+                  <a class="close" href="https://dubaiappstudio.ae/blog"
+                    >BLOG</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="right">
+              <div class="social-media">
+                <a href="#">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="#">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </div>
+              <div class="copy-">Copyright© 2023 5 Code</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
@@ -368,7 +831,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <!-- aos animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/features.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
