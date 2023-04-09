@@ -1,31 +1,29 @@
-$dark-bg: #010101;
-$secound-dark-bg: #0f0f11;
 $primary-color: #722ffb;
 $danger-color: #ffa28b;
 
 // start hero
 .hero {
-  height: calc(100vh - 67px);
+  height: calc(100vh - 55px);
   position: relative;
   color: white;
 
-  #video-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    min-height: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    z-index: -100;
-    overflow: hidden;
-    background-color: $dark-bg;
+  // #video-background {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   min-width: 100%;
+  //   min-height: 100%;
+  //   max-width: 100%;
+  //   max-height: 100%;
+  //   z-index: -100;
+  //   overflow: hidden;
+  //   background-color: var(--dark-bg);
 
-    video {
-      min-width: 100%;
-      min-height: 100%;
-    }
-  }
+  //   video {
+  //     min-width: 100%;
+  //     min-height: 100%;
+  //   }
+  // }
 
   .container-fluid {
     height: 100%;
@@ -40,6 +38,7 @@ $danger-color: #ffa28b;
       .title {
         font-size: 45px;
         font-weight: 700;
+        color: var(--color-text);
 
         span {
           color: $danger-color;
@@ -69,7 +68,8 @@ $danger-color: #ffa28b;
         }
 
         .btn-view {
-          background-color: $secound-dark-bg;
+          background-color: var(--secound-dark-bg);
+          color: var(--color-text);
         }
       }
     }
@@ -113,6 +113,7 @@ $danger-color: #ffa28b;
 .we-are {
   padding: 60px 10px;
   text-align: center;
+  color: var(--color-text);
 
   .container-fluid {
     .omg {
@@ -244,11 +245,12 @@ $danger-color: #ffa28b;
 // start trust-us
 .trust-us {
   padding: 50px 0;
+  color: white;
 
   .content {
     text-align: center;
     padding: 80px 0;
-    background-color: $dark-bg;
+    background-color: #010101;
     position: relative;
 
     &::before {
@@ -310,7 +312,8 @@ $danger-color: #ffa28b;
 .featured {
   padding: 100px 0 150px;
   position: relative;
-  background-color: $secound-dark-bg;
+  background-color: var(--secound-dark-bg);
+  color: var(--color-text);
 
   .line {
     display: flex;
@@ -449,6 +452,7 @@ $danger-color: #ffa28b;
 .our-process {
   padding: 100px 0 50px;
   position: relative;
+  color: var(--color-text);
 
   .container {
     .title {
@@ -633,6 +637,7 @@ $danger-color: #ffa28b;
   padding: 130px 0;
   position: relative;
   overflow: hidden;
+  color: var(--color-text);
 
   .container {
     .boxs {
@@ -668,8 +673,9 @@ $danger-color: #ffa28b;
         }
 
         .text {
-          margin-top: 30px;
-          margin-left: 70px;
+          padding-top: 30px;
+          padding-left: 70px;
+          background-color: var(--secound-dark-bg);
 
           .title {
             position: absolute;
@@ -855,6 +861,7 @@ $danger-color: #ffa28b;
 .contact-us {
   padding: 60px 0;
   position: relative;
+  color: var(--color-text);
 
   .content {
     display: flex;
@@ -874,19 +881,18 @@ $danger-color: #ffa28b;
         select,
         textarea {
           background-color: transparent;
-          border: 1px solid white;
+          border: 1px solid var(--border-color);
           border-radius: 50px;
           margin-bottom: 20px;
           padding: 0 15px;
-
-          color: white;
+          color: var(--color-text);
         }
 
         input {
           width: 49%;
           height: 40px;
           &::placeholder {
-            color: white;
+            color: var(--color-text);
           }
 
           &:nth-child(1),
@@ -900,7 +906,7 @@ $danger-color: #ffa28b;
           height: 40px;
 
           option {
-            background-color: $dark-bg;
+            background-color: var(--dark-bg);
           }
         }
 
@@ -911,7 +917,7 @@ $danger-color: #ffa28b;
           border-radius: 15px !important;
 
           &::placeholder {
-            color: white;
+            color: var(--color-text);
           }
         }
 
@@ -1161,13 +1167,13 @@ $danger-color: #ffa28b;
 // start techs
 .techs {
   background-color: white;
-  color: $dark-bg;
   padding: 50px 0;
 
   .title {
     text-align: center;
     font-size: 30px;
     margin-bottom: 60px;
+    color: #010101;
   }
 
   .swiper {

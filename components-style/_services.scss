@@ -1,10 +1,9 @@
-$dark-bg: #010101;
-$secound-dark-bg: #222227;
 $primary-color: #722ffb;
 $danger-color: #ffa28b;
 
 .services {
   overflow: hidden;
+  color: var(--color-text);
 }
 
 .holderCircle {
@@ -177,9 +176,9 @@ $danger-color: #ffa28b;
 }
 
 .contentCircle .CirItem p {
-  color: white !important;
   font-size: 16px;
   line-height: 1.5;
+  color: var(--color-text) !important;
 }
 
 // @media only screen and (min-width: 300px) and (max-width: 599px) {
