@@ -78,7 +78,7 @@ $danger-color: #ffa28b;
 
 @media (max-width: 550px) {
   .hero {
-    height: calc(100vh - 55px);
+    height: 50vh;
 
     .container-fluid {
       #video-background {
@@ -107,6 +107,7 @@ $danger-color: #ffa28b;
     }
   }
 }
+
 // end hero
 
 // start we-are

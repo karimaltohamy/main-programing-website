@@ -1,0 +1,252 @@
+$primary-color: #722ffb;
+$danger-color: #ffa28b;
+
+// start about-app
+.about-app {
+  padding: 60px 0;
+  background-color: white;
+  color: #0f0f11;
+
+  .title {
+    text-align: center;
+    font-weight: 700;
+
+    span {
+      background-image: linear-gradient(to right, #722ffb, #ffa28b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 2px;
+      margin-bottom: 0;
+    }
+  }
+
+  .line {
+    margin-top: 40px;
+    align-items: center;
+
+    .text {
+      margin-bottom: 10px;
+      position: relative;
+
+      h4 {
+        font-weight: 700;
+        font-size: 22px;
+      }
+
+      p {
+        margin-bottom: 0;
+        font-size: 14px;
+      }
+
+      .icon {
+        position: absolute;
+        background-color: #732ffb34;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &:not(:last-child):before {
+        content: "";
+        position: absolute;
+        top: 15px;
+        height: 100%;
+        width: 1px;
+        background-color: rgb(220 220 220);
+      }
+    }
+
+    .left {
+      text-align: right;
+      .text {
+        margin-right: 30px;
+
+        .icon {
+          top: 5px;
+          right: -40px;
+
+          i {
+            font-size: 12px;
+            color: $primary-color;
+          }
+        }
+
+        &:not(:last-child):before {
+          right: -25px;
+        }
+      }
+    }
+
+    .center {
+      text-align: center;
+
+      img {
+        width: 80%;
+      }
+    }
+
+    .right {
+      .text {
+        margin-left: 30px;
+
+        .icon {
+          top: 5px;
+          left: -40px;
+
+          i {
+            font-size: 12px;
+            color: $primary-color;
+          }
+        }
+
+        &:not(:last-child):before {
+          left: -25px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about-app {
+    padding: 30px 0;
+
+    .title {
+      font-size: 22px;
+    }
+
+    .line {
+      .text {
+        h4 {
+          font-size: 17px;
+          margin-bottom: 5px;
+        }
+
+        p {
+          font-size: 12px;
+        }
+
+        .icon {
+          width: 25px;
+          height: 25px;
+          left: -30px !important;
+
+          i {
+            font-size: 10px;
+          }
+        }
+
+        &::before {
+          left: -18px !important;
+        }
+      }
+
+      .left {
+        margin-right: 0;
+        margin-left: 30px;
+        text-align: inherit;
+
+        .text {
+          .icon {
+            right: auto;
+          }
+
+          &::before {
+            right: auto;
+            left: -18px;
+          }
+        }
+      }
+
+      .center {
+        img {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+// end about-app
+
+// start info-app
+.info-app {
+  padding: 60px 0;
+
+  .line {
+    .left {
+      .title {
+        font-size: 45px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      .desc {
+        font-size: 18px;
+      }
+
+      .features {
+        .feature {
+          margin-bottom: 10px;
+
+          i {
+            margin-right: 8px;
+            color: $danger-color;
+          }
+
+          span {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    .right {
+      .image {
+        img {
+          width: 100%;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .info-app {
+    padding: 30px 0;
+
+    .line {
+      .left {
+        text-align: center;
+        margin-bottom: 20px;
+
+        .title {
+          font-size: 23px;
+        }
+
+        .desc {
+          font-size: 13px;
+        }
+
+        .features {
+          .feature {
+            margin-bottom: 5px;
+
+            i {
+              margin-right: 5px;
+              font-size: 14px;
+            }
+
+            span {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// end info-app

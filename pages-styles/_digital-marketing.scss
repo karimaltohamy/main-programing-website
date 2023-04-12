@@ -1,0 +1,343 @@
+$primary-color: #722ffb;
+$danger-color: #ffa28b;
+
+// start knowUs-digital
+.knowUs-digital {
+  padding: 60px 0;
+  background-color: white;
+  color: #0f0f11;
+
+  .line {
+    .left {
+      .image {
+        text-align: right;
+        position: relative;
+        height: 530px;
+
+        img {
+          max-width: 100%;
+        }
+
+        .about-2 {
+          position: absolute;
+          bottom: 0;
+          right: 180px;
+        }
+      }
+    }
+
+    .right {
+      .subtitle {
+        color: $primary-color;
+        font-weight: 600;
+        font-size: 27px;
+      }
+
+      .title {
+        font-weight: 700;
+        margin: 10px 0 20px;
+      }
+
+      .desc {
+        line-height: 1.6;
+        font-size: 17px;
+        font-weight: 600;
+        color: gray;
+      }
+
+      .right-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .features {
+          .feature {
+            i {
+              font-size: 20px;
+              color: $danger-color;
+              margin-right: 8px;
+            }
+
+            span {
+              font-size: 18px;
+              font-weight: 600;
+            }
+          }
+        }
+
+        .mini-box {
+          border: 3px solid $primary-color;
+          padding: 25px;
+
+          > div {
+            justify-content: center;
+            i {
+              font-size: 40px;
+              color: $primary-color;
+            }
+
+            .num-experience {
+              font-size: 40px;
+              font-weight: 700;
+              margin-left: 20px;
+            }
+          }
+
+          .text-experience {
+            font-size: 17px;
+            font-size: 600;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .knowUs-digital {
+    padding: 30px 0;
+
+    .line {
+      .left {
+        .image {
+          height: 350px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+          }
+          .about-2 {
+            display: none;
+          }
+        }
+      }
+
+      .right {
+        margin-top: 20px;
+        text-align: center;
+
+        .subtitle {
+          font-size: 16px;
+        }
+
+        .title {
+          margin: 3px 0 10px;
+          font-size: 20px;
+        }
+
+        .desc {
+          font-size: 13px;
+        }
+
+        .right-bottom {
+          flex-direction: column;
+          gap: 20px;
+
+          .features {
+            .feature {
+              i {
+                font-size: 15px;
+                margin-right: 4px;
+              }
+
+              span {
+                font-size: 15px;
+              }
+            }
+          }
+
+          .mini-box {
+            padding: 12px;
+            border: 2px solid #722ffb;
+
+            > div {
+              i {
+                font-size: 30px;
+              }
+
+              .num-experience {
+                font-size: 28px;
+                margin-left: 10px;
+                margin-bottom: 0;
+              }
+            }
+
+            .text-experience {
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// end knowUs-digital
+
+// start services-digital
+.services-digital {
+  padding: 60px 0;
+
+  .subtitle {
+    display: block;
+    font-size: 18px;
+    color: $primary-color;
+    margin-bottom: 8px;
+  }
+
+  .title {
+    font-weight: 700;
+  }
+
+  .boxs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+
+    .box {
+      background-color: var(--secound-dark-bg);
+      padding: 35px 40px 30px;
+      position: relative;
+      cursor: pointer;
+      z-index: 10;
+
+      &::before,
+      &::after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        content: "";
+        transition: all 0.3s linear;
+      }
+
+      &::before {
+        background-image: url(../images/line-1.png);
+        background-color: var(--bg-theme-color2);
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        transform-origin: bottom center;
+        z-index: 3;
+      }
+
+      &::after {
+        background: linear-gradient(
+          135deg,
+          hsla(0, 0%, 9%, 0) 0%,
+          hsla(0, 0%, 9%, 0.65) 65%,
+          $primary-color 100%
+        );
+        z-index: 3;
+      }
+
+      .title-box,
+      p,
+      i {
+        position: relative;
+        z-index: 10;
+      }
+
+      .title-box {
+        font-weight: 700;
+        font-size: 25px;
+        padding-bottom: 25px;
+        border-bottom: 3px solid gray;
+        margin-bottom: 20px;
+        position: relative;
+
+        &::before {
+          content: "01";
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 20px;
+          height: 20px;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: gray;
+          font-size: 13px;
+          font-weight: 500;
+        }
+      }
+
+      i {
+        font-size: 50px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        text-align: center;
+        font-size: 14px;
+        margin-top: 10px;
+      }
+    }
+
+    .box.two {
+      .title-box {
+        &::before {
+          content: "02";
+        }
+      }
+    }
+
+    .box.three {
+      .title-box {
+        &::before {
+          content: "03";
+        }
+      }
+    }
+
+    .box.four {
+      .title-box {
+        &::before {
+          content: "04";
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .services-digital {
+    padding: 30px 0;
+    text-align: center;
+
+    .subtitle {
+      font-size: 15px;
+      margin-bottom: 3px;
+    }
+
+    .title {
+      font-size: 20px;
+    }
+
+    .boxs {
+      margin-top: 25px;
+
+      .box {
+        padding: 15px 30px 15px;
+
+        .title-box {
+          font-size: 20px;
+          padding-bottom: 15px;
+        }
+
+        i {
+          font-size: 35px;
+          margin-bottom: 0;
+        }
+
+        p {
+          margin-bottom: 0;
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+}
+// end services-digital

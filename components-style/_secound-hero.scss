@@ -1,0 +1,45 @@
+$primary-color: #722ffb;
+$danger-color: #ffa28b;
+
+// start secound-hero
+.secound-hero {
+  height: calc(100vh - 55px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+  background-color: var(--three-dark-bg);
+
+  .text {
+    text-align: center;
+
+    h1 {
+      background-image: linear-gradient(to right, #722ffb, #ffa28b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 50px;
+      letter-spacing: 2px;
+      font-weight: 700;
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-size: 50px;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .secound-hero {
+    height: 50vh;
+    .text {
+      h1,
+      h2 {
+        font-size: 35px;
+      }
+    }
+  }
+}
+// end secound-hero
