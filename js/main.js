@@ -14,71 +14,11 @@ menu.addEventListener("click", () => {
   menu.classList.remove("active");
 });
 
-// swiper
-window.addEventListener("resize", () => {
-  if (innerWidth < 420) {
-    const swiper = new Swiper(".mySwiper", {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      mousewheel: true,
-      loop: true,
-      autoplay: {
-        delay: 2000,
-      },
-    });
-  } else if (innerWidth < 768) {
-    const swiper = new Swiper(".mySwiper", {
-      slidesPerView: 4,
-      spaceBetween: 30,
-      mousewheel: true,
-      loop: true,
-      autoplay: {
-        delay: 2500,
-      },
-    });
-  }
-});
-
-const swiper = new Swiper(".mySwiper", {
-  slidesPerView: 7,
-  spaceBetween: 30,
-  mousewheel: true,
-  loop: true,
-  autoplay: {
-    delay: 2500,
-  },
-});
-
-if (innerWidth < 420) {
-  const swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    mousewheel: true,
-    loop: true,
-    autoplay: {
-      delay: 2500,
-    },
-  });
-}
-
-// openTab
-
-function openTab(link, id) {
-  const tabLinks = document.querySelectorAll(".tabcontent");
-  const links = document.querySelectorAll(".tablink");
-  const tabLink = document.getElementById(id);
-  const linkItem = document.getElementById(link);
-
-  tabLinks.forEach((item) => item.classList.remove("active"));
-  links.forEach((item) => item.classList.remove("active"));
-  tabLink.classList.add("active");
-  linkItem.classList.add("active");
-}
-
 // dark and light mode
 const checkbox = document.getElementById("checkbox");
 
 checkbox.addEventListener("change", () => {
+  console.log(true);
   document.body.classList.toggle("light");
   if (document.body.classList.length > 0) {
     (async () => {
@@ -260,3 +200,64 @@ checkbox.addEventListener("change", () => {
     })();
   }
 });
+
+// swiper
+window.addEventListener("resize", () => {
+  if (innerWidth < 420) {
+    const swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      mousewheel: true,
+      loop: true,
+      autoplay: {
+        delay: 2000,
+      },
+    });
+  } else if (innerWidth < 768) {
+    const swiper = new Swiper(".mySwiper", {
+      slidesPerView: 4,
+      spaceBetween: 30,
+      mousewheel: true,
+      loop: true,
+      autoplay: {
+        delay: 2500,
+      },
+    });
+  }
+});
+
+const swiper = new Swiper(".mySwiper", {
+  slidesPerView: 7,
+  spaceBetween: 30,
+  mousewheel: true,
+  loop: true,
+  autoplay: {
+    delay: 2500,
+  },
+});
+
+if (innerWidth < 420) {
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    mousewheel: true,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+    },
+  });
+}
+
+// openTab
+
+function openTab(link, id) {
+  const tabLinks = document.querySelectorAll(".tabcontent");
+  const links = document.querySelectorAll(".tablink");
+  const tabLink = document.getElementById(id);
+  const linkItem = document.getElementById(link);
+
+  tabLinks.forEach((item) => item.classList.remove("active"));
+  links.forEach((item) => item.classList.remove("active"));
+  tabLink.classList.add("active");
+  linkItem.classList.add("active");
+}

@@ -39,6 +39,7 @@ $danger-color: #ffa28b;
       position: relative;
       overflow: hidden;
       margin-bottom: 30px;
+      border: 2px solid var(--secound-dark-bg);
 
       &:hover {
         .image {

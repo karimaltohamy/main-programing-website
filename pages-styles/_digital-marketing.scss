@@ -177,6 +177,7 @@ $danger-color: #ffa28b;
 // start services-digital
 .services-digital {
   padding: 60px 0;
+  color: var(--color-text);
 
   .subtitle {
     display: block;
@@ -223,12 +224,7 @@ $danger-color: #ffa28b;
       }
 
       &::after {
-        background: linear-gradient(
-          135deg,
-          hsla(0, 0%, 9%, 0) 0%,
-          hsla(0, 0%, 9%, 0.65) 65%,
-          $primary-color 100%
-        );
+        background: var(--bg-box-digital);
         z-index: 3;
       }
 
