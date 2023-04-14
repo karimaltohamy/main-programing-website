@@ -1199,8 +1199,19 @@ footer .line .right .social-media a i {
 }
 
 @media (max-width: 768px) {
-  .secound-hero {
-    height: 50vh;
+  .secound-hero .danger-shadow {
+    -webkit-filter: blur(3em);
+            filter: blur(3em);
+    top: 7%;
+    left: -15%;
+    padding: 16% 22%;
+  }
+  .secound-hero .red-shadow {
+    -webkit-filter: blur(3em);
+            filter: blur(3em);
+    padding: 16% 22%;
+    bottom: 6%;
+    right: -7%;
   }
   .secound-hero .text h1,
 .secound-hero .text h2 {

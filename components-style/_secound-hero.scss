@@ -56,7 +56,21 @@ $danger-color: #ffa28b;
 
 @media (max-width: 768px) {
   .secound-hero {
-    height: 50vh;
+    .danger-shadow {
+      filter: blur(3em);
+      top: 7%;
+      left: -15%;
+
+      padding: 16% 22%;
+    }
+
+    .red-shadow {
+      filter: blur(3em);
+      padding: 16% 22%;
+      bottom: 6%;
+      right: -7%;
+    }
+
     .text {
       h1,
       h2 {
