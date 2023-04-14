@@ -4,8 +4,121 @@ $danger-color: #ffa28b;
 .services {
   overflow: hidden;
   color: var(--color-text);
+
+  .text {
+    .title {
+      font-size: 45px;
+      font-weight: 700;
+      position: relative;
+
+      img {
+        position: absolute;
+        top: -10px;
+        left: 10px;
+        width: 70px;
+      }
+
+      span {
+        background-image: linear-gradient(to right, #722ffb, #ffa28b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .boxs {
+      margin-top: 50px;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      gap: 15px;
+
+      .box {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        background-color: var(--secound-dark-bg);
+        padding: 20px;
+        border-radius: 10px;
+        position: relative;
+        z-index: 3;
+        overflow: hidden;
+
+        &::before {
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          background: linear-gradient(to left, $primary-color, $danger-color);
+          width: 0;
+          content: "";
+          transition: all 300ms ease;
+          z-index: -1;
+        }
+
+        &:hover {
+          background-color: transparent;
+
+          &::before {
+            width: 100%;
+          }
+        }
+        img {
+          width: 65px;
+        }
+
+        .info {
+          h4 {
+            font-size: 22px;
+            font-weight: 700;
+          }
+
+          p {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .services {
+    padding-top: 30px;
+    .text {
+      text-align: center;
+
+      .title {
+        font-size: 22px;
+      }
+
+      .boxs {
+        margin-top: 30px;
+        grid-template-columns: 100%;
+
+        .box {
+          flex-direction: column;
+          padding: 15px;
+          gap: 8px;
+
+          img {
+            width: 50px;
+          }
+
+          .info {
+            h4 {
+              font-size: 20px;
+              margin-bottom: 0;
+            }
+
+            p {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
+// circle section
 .holderCircle {
   width: 500px;
   height: 500px;
@@ -147,7 +260,7 @@ $danger-color: #ffa28b;
   font-size: 15px;
   width: 100%;
   height: 100%;
-  top: 0;
+  top: -25px;
   right: 0;
   margin: auto;
   line-height: 250px;
@@ -173,6 +286,7 @@ $danger-color: #ffa28b;
 .contentCircle .CirItem .title span {
   color: $primary-color;
   font-size: 24px;
+  letter-spacing: -1px;
 }
 
 .contentCircle .CirItem p {

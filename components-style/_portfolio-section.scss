@@ -40,6 +40,8 @@ $danger-color: #ffa28b;
       overflow: hidden;
       margin-bottom: 30px;
       border: 2px solid var(--secound-dark-bg);
+      border-radius: 10px;
+      display: block;
 
       &:hover {
         .image {
@@ -100,6 +102,7 @@ $danger-color: #ffa28b;
         align-items: center;
         justify-content: center;
         transition: all 0.3s;
+        border-radius: 10px;
 
         i {
           transform: rotate(-45deg);
@@ -148,6 +151,12 @@ $danger-color: #ffa28b;
       }
 
       .box {
+        display: block;
+        .image {
+          img {
+            height: 230px;
+          }
+        }
         .text-box {
           padding: 20px;
 

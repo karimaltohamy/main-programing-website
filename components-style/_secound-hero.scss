@@ -3,12 +3,35 @@ $danger-color: #ffa28b;
 
 // start secound-hero
 .secound-hero {
-  height: calc(100vh - 55px);
+  height: 40vh;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--color-text);
-  // background-color: var(--three-dark-bg);
+  position: relative;
+  overflow: hidden;
+
+  .red-shadow {
+    position: absolute;
+    z-index: 7;
+    bottom: -7%;
+    right: -18%;
+    padding: 7% 20%;
+    background: $primary-color;
+    -webkit-filter: blur(12em);
+    filter: blur(12em);
+  }
+
+  .danger-shadow {
+    position: absolute;
+    z-index: 7;
+    top: -7%;
+    left: -18%;
+    padding: 7% 20%;
+    background: $danger-color;
+    -webkit-filter: blur(12em);
+    filter: blur(12em);
+  }
 
   .text {
     text-align: center;

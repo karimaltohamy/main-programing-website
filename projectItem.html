@@ -102,6 +102,8 @@
 
       <!-- start secound-hero -->
     <div class="secound-hero">
+      <div class="red-shadow"></div>
+      <div class="danger-shadow"></div>
         <div class="text">
           <h1>Explore Saudi</h1>
           <h2>Portfolio</h2>
@@ -112,23 +114,36 @@
       <!-- start portfolio item -->
       <div class="portfolio-item">
         <div class="container">
-            <div class="row line">
-                <div class="col-md-8">
-                <div class="image">
-                    <img class="img-fluid" src="images/project-5.jpeg" alt="">
-                </div>
-                <!-- <div class="images">
-                    <img src="images/project-5.jpeg" alt="">
-                    <img src="images/project-5.jpeg" alt="">
-                    <img src="images/project-5.jpeg" alt="">
-                    <img src="images/project-5.jpeg" alt="">
-                    <img src="images/project-5.jpeg" alt="">
-                    <img src="images/project-5.jpeg" alt="">
-                    <img src="images/project-5.jpeg" alt="">
-                </div> -->
+            <div class="line">
+                  <div class=" box-imgs">
+                    <div class="left px-0">
+                      <div class="image">
+                        <img class="img-fluid" src="images/project-5.jpeg" alt="">
+                    </div>
+                    </div>
+                    <div class=" center">
+                      <div class="image">
+                        <img class="img-fluid" src="images/project-5.jpeg" alt="">
+                    </div>
+                    <div class="image">
+                      <img class="img-fluid" src="images/project-5.jpeg" alt="">
+                  </div>
+                    </div>
+                    <div class="right">
+                      <div class="image">
+                        <img class="img-fluid" src="images/project-5.jpeg" alt="">
+                    </div>
+                    <div class="image">
+                      <img class="img-fluid" src="images/project-5.jpeg" alt="">
+                    </div>
+                  </div>
+                  <button class="show-all">
+                    <i class="fa-regular fa-image"></i>
+                    Show all photos
+                  </button>
                 </div>
             
-                <div class="col-md-4 text">
+                <div class="text">
                     <h4 class="">Project Description</h4>
                     <p>Discover Saudi Company is the best company that provides tourism services within the Kingdom of Saudi Arabia. The site has been worked on by and our priority is customer satisfaction.</p>
                     <h4 class="">Project Details</h4>
@@ -143,7 +158,26 @@
             </div>
         </div>
       </div>
+
+      <!-- start popup all images -->
+      <div class="popup-all">
+        <i class="fa-solid fa-xmark close-popup"></i>
+
+        <div class="container-images">
+          <div class="images">
+            <img src="images/project-1.jpeg" alt="">
+            <img src="images/project-1.jpeg" alt="">
+            <img src="images/project-1.jpeg" alt="">
+            <img src="images/project-1.jpeg" alt="">
+            <img src="images/project-1.jpeg" alt="">
+          </div>
+        </div>
+      </div>
+      <!-- end popup all images -->
+
       <!-- end portfolio item -->
+
+      
 
 
       <!-- start contact-us -->
@@ -268,6 +302,7 @@
       <!-- aos animation -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/popup.js"></script>
     <script>
       AOS.init();
     </script>
