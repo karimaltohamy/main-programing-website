@@ -47,16 +47,29 @@ $danger-color: #ffa28b;
         animation: hero-text 2s 2s ease;
 
         .title {
-          font-size: 65px;
+          font-size: 60px;
           font-weight: 700;
           color: var(--color-text);
           position: relative;
           width: fit-content;
 
-          span {
-            background-image: linear-gradient(to right, #722ffb, #ffa28b);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+          p {
+            overflow: hidden;
+
+            span {
+              background-image: linear-gradient(to right, #722ffb, #ffa28b);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              display: none;
+
+              &.text-in {
+                display: block;
+                animation: textIn 0.5s ease;
+              }
+              &.text-out {
+                animation: textOut 0.5s ease;
+              }
+            }
           }
 
           .light-img {
@@ -102,10 +115,24 @@ $danger-color: #ffa28b;
       }
 
       .right {
+        position: relative;
+
         .image {
           animation: hero-img 2s 2s ease;
           img {
             width: 100%;
+            animation: move-hero 3s ease backwards infinite;
+          }
+        }
+
+        .circle2 {
+          position: absolute;
+          top: 5%;
+          left: -30px;
+          animation: circle2 3s 2s ease backwards infinite;
+
+          img {
+            width: 30px;
           }
         }
       }
@@ -113,22 +140,11 @@ $danger-color: #ffa28b;
       .circle {
         position: absolute;
         top: 40%;
-        right: -120px;
+        right: -40px;
         animation: circle 3s ease backwards infinite;
 
         img {
           width: 80px;
-        }
-      }
-
-      .circle2 {
-        position: absolute;
-        top: 5%;
-        left: -70px;
-        animation: circle2 3s ease backwards infinite;
-
-        img {
-          width: 30px;
         }
       }
 
@@ -1272,6 +1288,19 @@ $danger-color: #ffa28b;
   }
 }
 
+// move-hero
+@keyframes move-hero {
+  0% {
+    transform: translateX(-30px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-30px);
+  }
+}
+
 // hero text
 @keyframes hero-text {
   0% {
@@ -1297,13 +1326,11 @@ $danger-color: #ffa28b;
 
 @keyframes circle2 {
   0% {
-    transform: translateX(-30px);
+    transform: rotate(360deg);
   }
-  50% {
-    transform: translateX(0);
-  }
+
   100% {
-    transform: translateX(-30px);
+    transform: rotate(0deg);
   }
 }
 
@@ -1337,5 +1364,22 @@ $danger-color: #ffa28b;
   }
   100% {
     transform: rotate(180deg);
+  }
+}
+
+@keyframes textIn {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes textOut {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
   }
 }

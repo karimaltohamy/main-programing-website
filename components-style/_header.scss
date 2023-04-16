@@ -36,7 +36,7 @@ header {
 
     .logo {
       img {
-        width: 140px;
+        width: 160px;
       }
     }
 
@@ -86,7 +86,6 @@ header {
   left: 0;
   height: 100%;
   width: 100%;
-  background: white;
   z-index: 99999;
   clip-path: circle(25px at calc(-100% - 45px) 45px);
   transition: all 0.3s ease-in-out;
@@ -97,61 +96,253 @@ header {
   clip-path: circle(75%);
 }
 
-.wrapper > i {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 35px;
-  cursor: pointer;
+.wrapper .content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #000;
+  padding: 50px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    background-color: $primary-color;
+  }
+
+  .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      img {
+        width: 170px;
+      }
+    }
+
+    .container_close {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+
+      .phone {
+        position: relative;
+        i {
+          color: #111;
+          font-size: 20px;
+          margin-right: 8px;
+        }
+
+        span {
+          color: white;
+          font-weight: 600;
+          font-size: 20px;
+        }
+      }
+
+      .btn_close {
+        position: relative;
+        border: 1px solid white;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+
+        i {
+          font-size: 35px;
+          cursor: pointer;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 70px;
+    height: 80vh;
+
+    ul {
+      color: white;
+      padding-left: 0;
+
+      li {
+        a {
+          font-size: 40px;
+          font-weight: 700;
+          color: white;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          transition: all 0.3s ease;
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .text {
+      position: relative;
+
+      .box_text {
+        margin-bottom: 30px;
+        .date {
+          color: gray;
+          font-weight: 600;
+        }
+
+        p {
+          font-size: 20px;
+          font-weight: 700;
+          color: white;
+          max-width: 500px;
+        }
+      }
+
+      .social_media {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        a {
+          i {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
 }
 
-.wrapper ul {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  list-style: none;
-  text-align: center;
-  padding-left: 0;
+@media (max-width: 768px) {
+  .wrapper .content {
+    .center {
+      position: relative;
+      justify-content: center;
+
+      ul {
+        text-align: center;
+      }
+
+      .text {
+        display: none;
+      }
+    }
+  }
 }
-.wrapper ul li {
-  margin: 20px 0;
+
+@media (max-width: 600px) {
+  .wrapper .content {
+    padding: 25px;
+
+    .head {
+      .logo {
+        img {
+          width: 100px;
+        }
+      }
+
+      .container_close {
+        .phone {
+          display: none;
+
+          i {
+            font-size: 16px;
+            margin-right: 5px;
+          }
+
+          span {
+            font-size: 15px;
+          }
+        }
+
+        .btn_close {
+          width: 40px;
+          height: 40px;
+
+          i {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+
+    .center {
+      padding: 20px;
+      height: 70vh;
+
+      ul {
+        li {
+          a {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+  }
 }
-.wrapper ul li a {
-  color: none;
-  text-decoration: none;
-  font-size: 30px;
-  font-weight: 500;
-  padding: 0 25px;
-  border-radius: 50px;
-  background: white;
-  color: #000;
-  position: relative;
-  line-height: 50px;
-  transition: all 0.3s ease;
-}
-.wrapper ul li a:after {
-  position: absolute;
-  content: "";
-  background: #fff;
-  background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
-  /*background: linear-gradient(375deg, #1cc7d0, #2ede98);*/
-  width: 104%;
-  height: 110%;
-  left: -2%;
-  top: -5%;
-  border-radius: 50px;
-  transform: scaleY(0);
-  z-index: -1;
-  animation: rotate 1.5s linear infinite;
-  transition: transform 0.3s ease;
-}
-.wrapper ul li a:hover:after {
-  transform: scaleY(1);
-}
-.wrapper ul li a:hover {
-  color: #000;
-}
+
+// .wrapper ul {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   list-style: none;
+//   text-align: center;
+//   padding-left: 0;
+// }
+// .wrapper ul li {
+//   margin: 20px 0;
+// }
+// .wrapper ul li a {
+//   color: none;
+//   text-decoration: none;
+//   font-size: 30px;
+//   font-weight: 500;
+//   padding: 0 25px;
+//   border-radius: 50px;
+//   background: white;
+//   color: #000;
+//   position: relative;
+//   line-height: 50px;
+//   transition: all 0.3s ease;
+// }
+// .wrapper ul li a:after {
+//   position: absolute;
+//   content: "";
+//   background: #fff;
+//   background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+//   /*background: linear-gradient(375deg, #1cc7d0, #2ede98);*/
+//   width: 104%;
+//   height: 110%;
+//   left: -2%;
+//   top: -5%;
+//   border-radius: 50px;
+//   transform: scaleY(0);
+//   z-index: -1;
+//   animation: rotate 1.5s linear infinite;
+//   transition: transform 0.3s ease;
+// }
+// .wrapper ul li a:hover:after {
+//   transform: scaleY(1);
+// }
+// .wrapper ul li a:hover {
+//   color: #000;
+// }
+
 input[type="checkbox"] {
   display: none;
 }
@@ -164,7 +355,7 @@ input[type="checkbox"] {
 .label {
   width: 50px;
   height: 26px;
-  background-color: #111;
+  background-color: white;
   display: flex;
   border-radius: 50px;
   align-items: center;
@@ -172,13 +363,14 @@ input[type="checkbox"] {
   padding: 5px;
   position: relative;
   transform: scale(1.5);
-  margin: auto;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 .ball {
   width: 20px;
   height: 20px;
-  background-color: white;
+  background-color: black;
   position: absolute;
   top: 3px;
   left: 2px;
@@ -207,6 +399,23 @@ input[type="checkbox"] {
 
   .wrapper ul li a {
     font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .label {
+    margin: auto;
+    height: 20px;
+    width: 45px;
+
+    i {
+      font-size: 13px;
+    }
+
+    .ball {
+      height: 15px;
+      width: 15px;
+    }
   }
 }
 

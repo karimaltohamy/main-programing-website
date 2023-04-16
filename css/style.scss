@@ -5,6 +5,7 @@
 @use "../components-style/portfolio-section";
 @use "../components-style/secound-hero";
 @use "../components-style/contact-section";
+@use "../components-style/testimonials";
 @use "../pages-styles/index.scss";
 @use "../pages-styles/portfolio";
 @use "../pages-styles/portfolio-item";
@@ -16,3 +17,5 @@
 @use "../pages-styles/dedicated-resources";
 @use "../pages-styles/hosting-page";
 @use "../pages-styles/blog-page";
+@use "../pages-styles/blog-item";
+@use "../pages-styles/contact-us";

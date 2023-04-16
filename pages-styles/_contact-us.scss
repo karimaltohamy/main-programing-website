@@ -1,0 +1,254 @@
+$primary-color: #722ffb;
+$danger-color: #ffa28b;
+
+// start services_contact
+.services_contact {
+  padding: 60px 0;
+  background-color: var(--secound-dark-bg);
+
+  .subtitle {
+    font-size: 19px;
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    color: $primary-color;
+  }
+
+  .title {
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .boxs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+
+    .box {
+      background-color: var(--dark-bg);
+      padding: 40px;
+      text-align: center;
+      border-radius: 15px;
+
+      &:nth-child(1) {
+        .icon {
+          background-color: #5cecc930;
+          i {
+            color: #5cecc9;
+            font-size: 23px;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        .icon {
+          background-color: #71aaf630;
+          i {
+            color: #71aaf6;
+            font-size: 23px;
+          }
+        }
+      }
+      &:nth-child(3) {
+        .icon {
+          background-color: #c478ff30;
+          i {
+            color: #c478ff;
+            font-size: 23px;
+          }
+        }
+      }
+      &:nth-child(4) {
+        .icon {
+          background-color: #f6af7130;
+          i {
+            color: #f6af71;
+            font-size: 23px;
+          }
+        }
+      }
+
+      .icon {
+        width: 70px;
+        height: 70px;
+        margin: 0 auto 15px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        i {
+          font-size: 30px;
+        }
+      }
+
+      h4 {
+        font-size: 23px;
+
+        margin-bottom: 5px;
+      }
+
+      p {
+        font-size: 15px;
+        font-weight: 600;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .services_contact {
+    padding: 30px 0;
+
+    .subtitle {
+      font-size: 16px;
+    }
+
+    .title {
+      font-size: 20px;
+    }
+
+    .boxs {
+      margin-top: 25px;
+      gap: 15px;
+
+      .box {
+        padding: 20px;
+
+        .icon {
+          width: 60px;
+          height: 60px;
+        }
+      }
+    }
+  }
+}
+// end services_contact
+
+// start form_contact
+.form_contact {
+  padding: 60px 0;
+
+  .content {
+    max-width: 1000px;
+    margin: auto;
+
+    .title {
+      text-align: center;
+      font-weight: 700;
+    }
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 40px;
+
+      .input_item {
+        width: 49%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        label {
+          font-size: 17px;
+        }
+
+        input {
+          padding: 10px;
+          border: 1px solid var(--border-color);
+          outline: none;
+          border-radius: 50px;
+          background-color: transparent;
+
+          &::placeholder {
+            color: var(--color-text);
+          }
+        }
+      }
+
+      .textarea_item {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        label {
+          font-size: 17px;
+        }
+
+        textarea {
+          padding: 10px;
+          border: 1px solid var(--border-color);
+          outline: none;
+          border-radius: 10px;
+          background-color: transparent;
+          height: 140px;
+
+          &::placeholder {
+            color: var(--color-text);
+          }
+        }
+      }
+
+      .btn_form {
+        background: linear-gradient(55.38deg, #722ffb 17.6%, #ffa28b 75.36%);
+        color: white;
+        padding: 8px 25px;
+        border: none;
+        border-radius: 50px;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .form_contact {
+    .content {
+      form {
+        .input_item {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .form_contact {
+    .content {
+      .title {
+        font-size: 20px;
+      }
+      form {
+        margin-top: 25px;
+
+        .input_item,
+        .textarea_item {
+          label {
+            font-size: 15px;
+          }
+
+          input {
+            padding: 7px 10px;
+            font-size: 13px;
+          }
+
+          textarea {
+            height: 90px;
+            padding: 7px 10px;
+            font-size: 13px;
+          }
+        }
+
+        .btn_form {
+          padding: 5px 15px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+// end form_contact
