@@ -64,7 +64,7 @@ checkbox.addEventListener("change", () => {
             speed: 3,
             straight: false,
             trail: {
-              fillColor: "#fff",
+              fillColor: "#f1f5f9",
               length: 20,
               enable: true,
             },
@@ -87,7 +87,7 @@ checkbox.addEventListener("change", () => {
           },
         },
         background: {
-          color: "#fff",
+          color: "#f1f5f9",
         },
         fullScreen: {
           zIndex: -1,
@@ -200,53 +200,6 @@ checkbox.addEventListener("change", () => {
     })();
   }
 });
-
-// // swiper
-// window.addEventListener("resize", () => {
-//   if (innerWidth < 420) {
-//     const swiper = new Swiper(".mySwiper", {
-//       slidesPerView: 3,
-//       spaceBetween: 30,
-//       mousewheel: true,
-//       loop: true,
-//       autoplay: {
-//         delay: 2000,
-//       },
-//     });
-//   } else if (innerWidth < 768) {
-//     const swiper = new Swiper(".mySwiper", {
-//       slidesPerView: 4,
-//       spaceBetween: 30,
-//       mousewheel: true,
-//       loop: true,
-//       autoplay: {
-//         delay: 2500,
-//       },
-//     });
-//   }
-// });
-
-// const swiper = new Swiper(".mySwiper", {
-//   slidesPerView: 7,
-//   spaceBetween: 30,
-//   mousewheel: true,
-//   loop: true,
-//   autoplay: {
-//     delay: 2500,
-//   },
-// });
-
-// if (innerWidth < 420) {
-//   const swiper = new Swiper(".mySwiper", {
-//     slidesPerView: 3,
-//     spaceBetween: 30,
-//     mousewheel: true,
-//     loop: true,
-//     autoplay: {
-//       delay: 2500,
-//     },
-//   });
-// }
 
 // openTab
 
