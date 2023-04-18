@@ -207,8 +207,11 @@ footer {
 
 @media (max-width: 768px) {
   .main-footer {
+    height: 100vh;
     padding: 40px 0 10px;
     text-align: center;
+    display: flex;
+    align-items: center;
 
     .address-container {
       flex-direction: column;

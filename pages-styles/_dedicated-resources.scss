@@ -55,6 +55,7 @@ $danger-color: #ffa28b;
 // start what-we-do-resources
 .what-we-do-resources {
   padding: 60px 0;
+  color: var(--color-text);
 
   .line {
     .left {
@@ -74,7 +75,7 @@ $danger-color: #ffa28b;
       .desc {
         font-size: 18px;
         line-height: 1.5;
-        color: rgb(181, 181, 181);
+        color: rgb(150 150 150);
       }
 
       a {
@@ -123,7 +124,7 @@ $danger-color: #ffa28b;
           }
 
           p {
-            color: rgb(182, 182, 182);
+            color: rgb(150 150 150);
             margin-bottom: 0;
           }
         }

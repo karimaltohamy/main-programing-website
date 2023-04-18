@@ -77,11 +77,11 @@ $danger-color: #ffa28b;
     padding: 30px 0;
 
     .subtitle {
-      font-size: 17px;
+      font-size: 16px;
     }
 
     .title {
-      font-size: 22px;
+      font-size: 20px;
     }
 
     .swiper_testimonials {
@@ -93,9 +93,14 @@ $danger-color: #ffa28b;
         gap: 10px;
         padding: 15px;
 
+        img {
+          width: 60px;
+          height: 60px;
+        }
+
         .text {
           p {
-            font-size: 15px;
+            font-size: 13px;
             line-height: 1.4;
             margin-bottom: 5px;
           }
@@ -105,17 +110,17 @@ $danger-color: #ffa28b;
 
             .info {
               h4 {
-                font-size: 19px;
+                font-size: 18px;
               }
 
               span {
-                font-size: 14px;
+                font-size: 13px;
               }
             }
 
             .stars {
               i {
-                font-size: 12px;
+                font-size: 10px;
               }
             }
           }

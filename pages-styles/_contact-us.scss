@@ -5,6 +5,7 @@ $danger-color: #ffa28b;
 .services_contact {
   padding: 60px 0;
   background-color: var(--secound-dark-bg);
+  color: var(--color-text);
 
   .subtitle {
     font-size: 19px;
@@ -130,6 +131,7 @@ $danger-color: #ffa28b;
 // start form_contact
 .form_contact {
   padding: 60px 0;
+  color: var(--color-text);
 
   .content {
     max-width: 1000px;

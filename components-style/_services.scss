@@ -99,17 +99,19 @@ $danger-color: #ffa28b;
           gap: 8px;
 
           img {
-            width: 50px;
+            width: 40px;
           }
 
           .info {
             h4 {
-              font-size: 20px;
+              font-size: 19px;
               margin-bottom: 0;
             }
 
             p {
               margin-bottom: 0;
+              font-size: 14px;
+              margin-top: 3px;
             }
           }
         }
@@ -295,28 +297,6 @@ $danger-color: #ffa28b;
   color: var(--color-text) !important;
 }
 
-// @media only screen and (min-width: 300px) and (max-width: 599px) {
-//   .holderCircle {
-//     /* width: 300px; height: 300px;*/
-//     margin: 110px auto;
-//   }
-
-//   .holderCircle::after {
-//     width: 100%;
-//     height: 100%;
-//   }
-
-//   .dotCircle {
-//     width: 100%;
-//     height: 100%;
-//     top: 0;
-//     right: 0;
-//     bottom: 0;
-//     left: 0;
-//     margin: auto;
-//   }
-// }
-
 @media (max-width: 500px) {
   .dotCircle {
     display: none;
@@ -336,6 +316,14 @@ $danger-color: #ffa28b;
   }
 
   .contentCircle {
-    top: 20%;
+    top: 25%;
+  }
+
+  .contentCircle .CirItem .title span {
+    font-size: 20px;
+  }
+
+  .contentCircle .CirItem p {
+    font-size: 14px;
   }
 }

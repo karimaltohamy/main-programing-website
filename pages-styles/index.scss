@@ -7,25 +7,7 @@ $danger-color: #ffa28b;
   position: relative;
   color: white;
 
-  // #video-background {
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   min-width: 100%;
-  //   min-height: 100%;
-  //   max-width: 100%;
-  //   max-height: 100%;
-  //   z-index: -100;
-  //   overflow: hidden;
-  //   background-color: var(--dark-bg);
-
-  //   video {
-  //     min-width: 100%;
-  //     min-height: 100%;
-  //   }
-  // }
-
-  .container-fluid {
+  .container {
     height: 100%;
     width: 100%;
     display: flex;
@@ -119,6 +101,8 @@ $danger-color: #ffa28b;
 
         .image {
           animation: hero-img 2s 2s ease;
+          text-align: center;
+
           img {
             width: 100%;
             animation: move-hero 3s ease backwards infinite;
@@ -167,9 +151,9 @@ $danger-color: #ffa28b;
 
 @media (max-width: 550px) {
   .hero {
-    height: auto;
+    height: 100vh;
 
-    .container-fluid {
+    .container {
       #video-background {
         video {
           height: calc(100vh - 55px);
@@ -246,6 +230,7 @@ $danger-color: #ffa28b;
       justify-content: center;
       flex-wrap: wrap;
       gap: 10px;
+
       margin-bottom: 10px;
 
       h2 {
@@ -316,26 +301,30 @@ $danger-color: #ffa28b;
     .container-fluid {
       .omg {
         flex-wrap: wrap;
+        gap: 0;
+        row-gap: 0px;
+        column-gap: 5px;
 
         h2 {
-          font-size: 30px;
+          font-size: 22px;
         }
 
         .slot-word {
-          font-size: 40px;
+          font-size: 25px;
         }
       }
 
       .omg-h4 {
         margin-bottom: 3px;
-        font-size: 16px;
+        font-size: 13px;
       }
 
       .omg-desc {
-        font-size: 14px;
+        font-size: 12px;
       }
 
       .read-more {
+        margin-top: 7px;
         .text {
           font-size: 14px;
         }
@@ -349,21 +338,6 @@ $danger-color: #ffa28b;
   }
 }
 
-@media (max-width: 768px) {
-  .we-are {
-    .container-fluid {
-      .omg {
-        h2 {
-          font-size: 26px;
-        }
-
-        .slot-word {
-          font-size: 30px;
-        }
-      }
-    }
-  }
-}
 // end we-are
 
 // start trust-us
@@ -598,6 +572,7 @@ $danger-color: #ffa28b;
 
     .line {
       .left {
+        margin-bottom: 10px;
         .image {
           margin: auto;
         }
@@ -616,7 +591,7 @@ $danger-color: #ffa28b;
             width: 100%;
 
             img {
-              width: 50px;
+              width: 40px;
             }
 
             .info {
@@ -627,7 +602,8 @@ $danger-color: #ffa28b;
 
               p {
                 margin-bottom: 0;
-                font-size: 14px;
+                font-size: 13px;
+                margin-top: 3px;
               }
             }
           }
@@ -760,12 +736,13 @@ $danger-color: #ffa28b;
 
 @media (max-width: 768px) {
   .our-process {
-    padding: 50px 0 30px;
+    padding: 30px 0;
 
     .container {
       text-align: center;
       .title {
-        font-size: 25px;
+        font-size: 22px;
+        margin-bottom: 15px;
       }
 
       .line {
@@ -800,7 +777,7 @@ $danger-color: #ffa28b;
 
         .right {
           .tabcontent {
-            padding: 2rem;
+            padding: 1.5rem;
 
             .title-box {
               font-size: 20px;
@@ -815,6 +792,7 @@ $danger-color: #ffa28b;
 
             .desc {
               font-size: 13px;
+              margin-bottom: 0;
             }
           }
         }
@@ -963,6 +941,14 @@ $danger-color: #ffa28b;
           padding: 4px 20px;
           font-size: 15px;
           margin-top: 4px;
+        }
+      }
+
+      .right {
+        .image {
+          img {
+            width: 90%;
+          }
         }
       }
     }
@@ -1192,44 +1178,49 @@ $danger-color: #ffa28b;
 
 @media (max-width: 600px) {
   .blog-section {
-    padding: 50px 0;
+    padding: 30px 0;
 
     .container {
+      .main-title {
+        font-size: 20px;
+      }
+
       .boxs {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        margin-top: 25px;
 
         .box {
           transform: translateY(0) !important;
 
           .image {
-            height: 250px;
+            height: 200px;
           }
 
           .text {
-            padding: 15px 20px;
+            padding: 15px;
             .title {
-              font-size: 18px;
+              font-size: 17px;
               margin-bottom: 0;
             }
 
             .desc {
-              font-size: 13px;
+              font-size: 12px;
               margin-bottom: 0;
             }
 
             .bottom-box {
               flex-wrap: wrap;
 
-              margin-top: 15px;
+              margin-top: 10px;
 
               .date,
               .user {
                 i {
-                  font-size: 15px;
+                  font-size: 14px;
                 }
 
                 span {
-                  font-size: 15px;
+                  font-size: 14px;
                 }
               }
             }
@@ -1291,13 +1282,13 @@ $danger-color: #ffa28b;
 // move-hero
 @keyframes move-hero {
   0% {
-    transform: translateX(-30px);
+    transform: translateY(-30px);
   }
   50% {
-    transform: translateX(0);
+    transform: translateY(0);
   }
   100% {
-    transform: translateX(-30px);
+    transform: translateY(-30px);
   }
 }
 

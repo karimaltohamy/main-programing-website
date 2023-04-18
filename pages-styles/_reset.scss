@@ -22,6 +22,8 @@ body {
     hsla(0deg, 0%, 9%, 0.65) 65%,
     #722ffb 100%
   );
+  --mini-box-bg: #1e1e21;
+  --secound-mini-box-bg: #1a1a1d;
 
   scroll-behavior: smooth;
   font-family: "Cairo", sans-serif !important;
@@ -43,6 +45,8 @@ body.light {
     hsl(0deg 0% 100% / 65%) 65%,
     #722ffb 100%
   );
+  --mini-box-bg: #f3f3ff;
+  --secound-mini-box-bg: #cdd3dc;
 }
 
 ::-webkit-scrollbar {
@@ -56,7 +60,7 @@ body.light {
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: #c2c2c2;
+  background-color: #2b2b2b;
   width: 8px;
 }
 
@@ -129,11 +133,31 @@ p {
     }
 
     .inline-text {
+      font-size: 15px;
       letter-spacing: 0.5rem;
       z-index: 2;
       color: #fff;
       font-family: "Metropolis-Light";
       text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .side-line {
+    .circul {
+      left: 7px;
+
+      a {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    .main-line {
+      .inline-text {
+        font-size: 11px;
+      }
     }
   }
 }
