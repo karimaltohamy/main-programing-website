@@ -1,5 +1,6 @@
 const btnMenu = document.querySelector(".menu-btn");
 const menu = document.querySelector(".wrapper");
+const links = document.querySelectorAll(".wrapper .content .center ul li");
 const btnClose = document.querySelector(".btn-close-menu");
 
 btnMenu.addEventListener("click", () => {
@@ -10,8 +11,10 @@ btnClose.addEventListener("click", () => {
   menu.classList.remove("active");
 });
 
-menu.addEventListener("click", () => {
-  menu.classList.remove("active");
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    menu.classList.remove("active");
+  });
 });
 
 // dark and light mode

@@ -182,3 +182,41 @@ p {
 }
 
 // end side-line
+
+//
+.dropdown {
+  .btn {
+    background-color: var(--dark-bg) !important;
+    border: none;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-text);
+
+    img {
+      width: 20px;
+    }
+
+    &::after {
+      display: none !important;
+    }
+  }
+
+  .dropdown-menu {
+    background-color: var(--secound-dark-bg);
+    color: var(--color-text);
+    border: 1px solid gray;
+    li {
+      a {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        img {
+          width: 20px;
+        }
+      }
+    }
+  }
+}

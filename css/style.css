@@ -191,6 +191,43 @@ p {
     width: 80px;
   }
 }
+.dropdown .btn {
+  background-color: var(--dark-bg) !important;
+  border: none;
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  color: var(--color-text);
+}
+.dropdown .btn img {
+  width: 20px;
+}
+.dropdown .btn::after {
+  display: none !important;
+}
+.dropdown .dropdown-menu {
+  background-color: var(--secound-dark-bg);
+  color: var(--color-text);
+  border: 1px solid gray;
+}
+.dropdown .dropdown-menu li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+.dropdown .dropdown-menu li a img {
+  width: 20px;
+}
+
 header {
   background-color: var(--secound-dark-bg);
   padding: 8px 0;
@@ -235,6 +272,15 @@ header .header-warpper .icon-container #active:checked ~ .menu-btn {
 header .header-warpper .logo img {
   width: 160px;
 }
+header .header-warpper .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
 header .header-warpper .btn-start {
   border: none;
   background: linear-gradient(55.38deg, #722ffb 17.6%, #ffa28b 75.36%);
@@ -252,6 +298,9 @@ header .header-warpper .btn-start {
   }
   header .header-warpper .logo img {
     width: 110px;
+  }
+  header .header-warpper .info .dropdown {
+    display: none;
   }
   header .header-warpper .btn-start {
     padding: 5px 8px;
@@ -367,7 +416,7 @@ header .header-warpper .btn-start {
   color: white;
   padding-left: 0;
 }
-.wrapper .content .center ul li a {
+.wrapper .content .center ul li > a {
   font-size: 40px;
   font-weight: 700;
   color: white;
@@ -376,11 +425,25 @@ header .header-warpper .btn-start {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.wrapper .content .center ul li a:hover {
+.wrapper .content .center ul li > a:hover {
   color: #722ffb;
 }
 .wrapper .content .center ul li:not(:last-child) {
   margin-bottom: 10px;
+}
+.wrapper .content .center ul .dropdown {
+  margin-bottom: 20px;
+}
+.wrapper .content .center ul .dropdown .btn {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: var(--secound-dark-bg) !important;
+}
+.wrapper .content .center ul .dropdown .dropdown-menu li > a {
+  font-size: 16px !important;
+  letter-spacing: 0 !important;
+  gap: 10px !important;
 }
 .wrapper .content .center .text {
   position: relative;
@@ -1808,8 +1871,8 @@ footer .line .right .social-media a i {
   width: 50%;
 }
 .hero .container .content .left {
-  -webkit-animation: hero-text 2s 2s ease;
-          animation: hero-text 2s 2s ease;
+  -webkit-animation: hero-text 2s ease;
+          animation: hero-text 2s ease;
 }
 .hero .container .content .left .title {
   font-size: 60px;
@@ -1854,7 +1917,7 @@ footer .line .right .social-media a i {
   color: #bdbdbd;
   max-width: 600px;
 }
-.hero .container .content .left .btns button {
+.hero .container .content .left .btns a {
   padding: 10px 20px;
   border-radius: 50px;
   color: white;
@@ -1873,8 +1936,8 @@ footer .line .right .social-media a i {
   position: relative;
 }
 .hero .container .content .right .image {
-  -webkit-animation: hero-img 2s 2s ease;
-          animation: hero-img 2s 2s ease;
+  -webkit-animation: hero-img 2s ease;
+          animation: hero-img 2s ease;
   text-align: center;
 }
 .hero .container .content .right .image img {
@@ -1886,8 +1949,8 @@ footer .line .right .social-media a i {
   position: absolute;
   top: 5%;
   left: -30px;
-  -webkit-animation: circle2 3s 2s ease backwards infinite;
-          animation: circle2 3s 2s ease backwards infinite;
+  -webkit-animation: circle2 3s ease backwards infinite;
+          animation: circle2 3s ease backwards infinite;
 }
 .hero .container .content .right .circle2 img {
   width: 30px;
@@ -1915,7 +1978,7 @@ footer .line .right .social-media a i {
 
 @media (max-width: 550px) {
   .hero {
-    height: 100vh;
+    height: calc(100vh - 50px);
   }
   .hero .container #video-background video {
     height: calc(100vh - 55px);
@@ -1929,7 +1992,7 @@ footer .line .right .social-media a i {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    gap: 20px;
+    gap: 100px;
     padding: 40px 0;
   }
   .hero .container .content .left,
@@ -1948,13 +2011,18 @@ footer .line .right .social-media a i {
   .hero .container .content .left .desc {
     font-size: 13px;
     line-height: 17px;
+    max-width: 290px;
+    margin: 0 auto 10px;
   }
-  .hero .container .content .left .btns button {
+  .hero .container .content .left .btns a {
     padding: 6px 10px;
     font-size: 13px;
   }
+  .hero .container .content .right .image {
+    text-align: center;
+  }
   .hero .container .content .right .image img {
-    width: 80%;
+    width: 100%;
   }
   .hero .container .content .circle {
     right: -30px;

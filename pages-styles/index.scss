@@ -26,7 +26,7 @@ $danger-color: #ffa28b;
       }
 
       .left {
-        animation: hero-text 2s 2s ease;
+        animation: hero-text 2s ease;
 
         .title {
           font-size: 60px;
@@ -72,7 +72,7 @@ $danger-color: #ffa28b;
         }
 
         .btns {
-          button {
+          a {
             padding: 10px 20px;
             border-radius: 50px;
             color: white;
@@ -100,7 +100,7 @@ $danger-color: #ffa28b;
         position: relative;
 
         .image {
-          animation: hero-img 2s 2s ease;
+          animation: hero-img 2s ease;
           text-align: center;
 
           img {
@@ -113,7 +113,7 @@ $danger-color: #ffa28b;
           position: absolute;
           top: 5%;
           left: -30px;
-          animation: circle2 3s 2s ease backwards infinite;
+          animation: circle2 3s ease backwards infinite;
 
           img {
             width: 30px;
@@ -151,7 +151,7 @@ $danger-color: #ffa28b;
 
 @media (max-width: 550px) {
   .hero {
-    height: 100vh;
+    height: calc(100vh - 50px);
 
     .container {
       #video-background {
@@ -164,7 +164,7 @@ $danger-color: #ffa28b;
         text-align: center;
         flex-direction: column;
         justify-content: center;
-        gap: 20px;
+        gap: 100px;
         padding: 40px 0;
 
         .left,
@@ -187,10 +187,12 @@ $danger-color: #ffa28b;
           .desc {
             font-size: 13px;
             line-height: 17px;
+            max-width: 290px;
+            margin: 0 auto 10px;
           }
 
           .btns {
-            button {
+            a {
               padding: 6px 10px;
               font-size: 13px;
             }
@@ -199,8 +201,9 @@ $danger-color: #ffa28b;
 
         .right {
           .image {
+            text-align: center;
             img {
-              width: 80%;
+              width: 100%;
             }
           }
         }
