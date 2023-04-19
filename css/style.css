@@ -237,6 +237,11 @@ p {
   width: 20px;
 }
 
+@media (max-width: 768px) {
+  .dropdown {
+    margin: auto;
+  }
+}
 header {
   background-color: var(--secound-dark-bg);
   padding: 8px 0;
@@ -1664,6 +1669,9 @@ footer .line .right .social-media a i {
   .contact-us .content .left form input {
     width: 100%;
   }
+  .contact-us .content .left form input:nth-child(1), .contact-us .content .left form input:nth-child(3) {
+    margin-right: 0 !important;
+  }
 }
 @media (max-width: 600px) {
   .contact-us .content {
@@ -2637,7 +2645,7 @@ footer .line .right .social-media a i {
 .hosting-section .line .left .btn-read {
   padding: 8px 30px;
   border-radius: 50px;
-  background-color: var(--secound-dark-bg);
+  background-color: #0f0f11;
   color: white !important;
   display: inline-block;
   margin-top: 15px;

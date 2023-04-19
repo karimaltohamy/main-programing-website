@@ -214,6 +214,11 @@ $danger-color: #ffa28b;
         form {
           input {
             width: 100%;
+
+            &:nth-child(1),
+            &:nth-child(3) {
+              margin-right: 0 !important;
+            }
           }
         }
       }
