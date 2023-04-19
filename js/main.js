@@ -1,24 +1,194 @@
+// local storage to set mode
+if (localStorage.getItem("mode") === "light") {
+  document.body.classList.add("light");
+  (async () => {
+    await loadPolygonPath(tsParticles);
+
+    await tsParticles.load({
+      particles: {
+        color: {
+          value: "#722ffb",
+          animation: {
+            enable: true,
+            speed: 10,
+          },
+        },
+        move: {
+          attract: {
+            enable: false,
+            distance: 100,
+            rotate: {
+              x: 2000,
+              y: 2000,
+            },
+          },
+          direction: "none",
+          enable: true,
+          outModes: {
+            default: "destroy",
+          },
+          path: {
+            clamp: false,
+            enable: true,
+            delay: {
+              value: 0,
+            },
+            generator: "polygonPathGenerator",
+            options: {
+              sides: 6,
+              turnSteps: 30,
+              angle: 30,
+            },
+          },
+          random: false,
+          speed: 3,
+          straight: false,
+          trail: {
+            fillColor: "#f1f5f9",
+            length: 20,
+            enable: true,
+          },
+        },
+        number: {
+          density: {
+            enable: true,
+            area: 800,
+          },
+          value: 0,
+        },
+        opacity: {
+          value: 1,
+        },
+        shape: {
+          type: "circle",
+        },
+        size: {
+          value: 2,
+        },
+      },
+      background: {
+        color: "#f1f5f9",
+      },
+      fullScreen: {
+        zIndex: -1,
+      },
+      emitters: {
+        direction: "none",
+        rate: {
+          quantity: 1,
+          delay: 0.25,
+        },
+        size: {
+          width: 0,
+          height: 0,
+        },
+        position: {
+          x: 50,
+          y: 50,
+        },
+      },
+    });
+  })();
+} else {
+  document.body.classList.remove("light");
+  (async () => {
+    await loadPolygonPath(tsParticles);
+
+    await tsParticles.load({
+      particles: {
+        color: {
+          value: "#722ffb",
+          animation: {
+            enable: true,
+            speed: 10,
+          },
+        },
+        move: {
+          attract: {
+            enable: false,
+            distance: 100,
+            rotate: {
+              x: 2000,
+              y: 2000,
+            },
+          },
+          direction: "none",
+          enable: true,
+          outModes: {
+            default: "destroy",
+          },
+          path: {
+            clamp: false,
+            enable: true,
+            delay: {
+              value: 0,
+            },
+            generator: "polygonPathGenerator",
+            options: {
+              sides: 6,
+              turnSteps: 30,
+              angle: 30,
+            },
+          },
+          random: false,
+          speed: 3,
+          straight: false,
+          trail: {
+            fillColor: "#000",
+            length: 20,
+            enable: true,
+          },
+        },
+        number: {
+          density: {
+            enable: true,
+            area: 800,
+          },
+          value: 0,
+        },
+        opacity: {
+          value: 1,
+        },
+        shape: {
+          type: "circle",
+        },
+        size: {
+          value: 2,
+        },
+      },
+      background: {
+        color: "#000",
+      },
+      fullScreen: {
+        zIndex: -1,
+      },
+      emitters: {
+        direction: "none",
+        rate: {
+          quantity: 1,
+          delay: 0.25,
+        },
+        size: {
+          width: 0,
+          height: 0,
+        },
+        position: {
+          x: 50,
+          y: 50,
+        },
+      },
+    });
+  })();
+}
+
+// variables
 const btnMenu = document.querySelector(".menu-btn");
 const menu = document.querySelector(".wrapper");
 const links = document.querySelectorAll(".wrapper .content .center ul li");
 const btnClose = document.querySelector(".btn-close-menu");
-
-btnMenu.addEventListener("click", () => {
-  menu.classList.add("active");
-});
-
-btnClose.addEventListener("click", () => {
-  menu.classList.remove("active");
-});
-
-links.forEach((link) => {
-  link.addEventListener("click", () => {
-    menu.classList.remove("active");
-  });
-});
+const checkbox = document.getElementById("checkbox");
 
 // dark and light mode
-const checkbox = document.getElementById("checkbox");
 
 checkbox.addEventListener("change", () => {
   console.log(true);
@@ -202,6 +372,29 @@ checkbox.addEventListener("change", () => {
       });
     })();
   }
+
+  document.body.classList.length > 0
+    ? localStorage.setItem("mode", "light")
+    : localStorage.setItem("mode", "dark");
+});
+
+// open and close menu
+btnMenu.addEventListener("click", () => {
+  menu.classList.add("active");
+});
+
+btnClose.addEventListener("click", () => {
+  menu.classList.remove("active");
+});
+
+checkbox.addEventListener("click", () => {
+  menu.classList.remove("active");
+});
+
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    menu.classList.remove("active");
+  });
 });
 
 // openTab

@@ -191,10 +191,16 @@ p {
     width: 80px;
   }
 }
+.dropdown {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
 .dropdown .btn {
   background-color: var(--dark-bg) !important;
   border: none;
   border-radius: 50px;
+  padding: 8px 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -202,7 +208,7 @@ p {
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
-  color: var(--color-text);
+  color: var(--color-text) !important;
 }
 .dropdown .btn img {
   width: 20px;
@@ -223,6 +229,9 @@ p {
       -ms-flex-align: center;
           align-items: center;
   gap: 20px;
+}
+.dropdown .dropdown-menu li a:hover {
+  background-color: var(--secound-dark-bg) !important;
 }
 .dropdown .dropdown-menu li a img {
   width: 20px;
@@ -1865,6 +1874,7 @@ footer .line .right .social-media a i {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  gap: 75px;
 }
 .hero .container .content .left,
 .hero .container .content .right {
@@ -1930,7 +1940,7 @@ footer .line .right .social-media a i {
 }
 .hero .container .content .left .btns .btn-view {
   background-color: var(--secound-dark-bg);
-  color: var(--color-text);
+  color: var(--color-text) !important;
 }
 .hero .container .content .right {
   position: relative;
@@ -1992,7 +2002,7 @@ footer .line .right .social-media a i {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    gap: 100px;
+    gap: 80px;
     padding: 40px 0;
   }
   .hero .container .content .left,

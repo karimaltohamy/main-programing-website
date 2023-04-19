@@ -19,6 +19,7 @@ $danger-color: #ffa28b;
       justify-content: center;
       align-items: center;
       position: relative;
+      gap: 75px;
 
       .left,
       .right {
@@ -91,7 +92,7 @@ $danger-color: #ffa28b;
 
           .btn-view {
             background-color: var(--secound-dark-bg);
-            color: var(--color-text);
+            color: var(--color-text) !important;
           }
         }
       }
@@ -164,7 +165,7 @@ $danger-color: #ffa28b;
         text-align: center;
         flex-direction: column;
         justify-content: center;
-        gap: 100px;
+        gap: 80px;
         padding: 40px 0;
 
         .left,
