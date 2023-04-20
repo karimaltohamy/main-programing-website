@@ -14,6 +14,7 @@ body {
   --dark-bg: #010101;
   --secound-dark-bg: #0f0f11;
   --three-dark-bg: transparent;
+  --header-bg: black;
   --color-text: white;
   --border-color: white;
   --bg-box-digital: linear-gradient(
@@ -35,9 +36,10 @@ body {
 
 body.light {
   --dark-bg: #f1f5f9;
-  --color-text: #0f172a;
-  --three-dark-bg: #e2e8f0;
   --secound-dark-bg: #e2e8f0;
+  --three-dark-bg: #e2e8f0;
+  --header-bg: #e2e8f0;
+  --color-text: #0f172a;
   --border-color: rgb(95 95 95);
   --bg-box-digital: linear-gradient(
     135deg,
@@ -187,7 +189,7 @@ p {
 .dropdown {
   width: fit-content;
   .btn {
-    background-color: var(--dark-bg) !important;
+    background-color: var(--dark-bg);
     border: none;
     border-radius: 50px;
     padding: 8px 25px;

@@ -105,7 +105,7 @@ $danger-color: #ffa28b;
           text-align: center;
 
           img {
-            width: 100%;
+            width: 90%;
             animation: move-hero 3s ease backwards infinite;
           }
         }
@@ -177,6 +177,11 @@ $danger-color: #ffa28b;
           .title {
             font-size: 35px;
             margin: auto;
+            width: 100%;
+
+            span {
+              font-size: 30px;
+            }
 
             .light-img {
               width: 75px;
@@ -189,7 +194,7 @@ $danger-color: #ffa28b;
             font-size: 13px;
             line-height: 17px;
             max-width: 290px;
-            margin: 0 auto 10px;
+            margin: 0 auto 15px;
           }
 
           .btns {
@@ -204,7 +209,7 @@ $danger-color: #ffa28b;
           .image {
             text-align: center;
             img {
-              width: 100%;
+              width: 95%;
             }
           }
         }
