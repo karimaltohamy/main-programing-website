@@ -259,6 +259,7 @@ $danger-color: #ffa28b;
 // start location_map
 .location_map {
   padding: 50px 0;
+  color: var(--color-text);
 
   .line {
     display: flex;

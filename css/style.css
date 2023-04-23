@@ -6526,6 +6526,7 @@ footer .line .right .social-media a i {
 }
 .location_map {
   padding: 50px 0;
+  color: var(--color-text);
 }
 .location_map .line {
   display: -webkit-box;
