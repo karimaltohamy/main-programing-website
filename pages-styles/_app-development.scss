@@ -251,3 +251,145 @@ $danger-color: #ffa28b;
   }
 }
 // end info-app
+
+// start services_app
+.services_app {
+  padding: 60px 0;
+  background-color: var(--secound-dark-bg);
+  color: var(--color-text);
+
+  .line {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    .left,
+    .right {
+      width: 50%;
+    }
+
+    .left {
+      .title {
+        font-size: 35px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      .desc {
+        margin-bottom: 10px;
+        font-size: 17px;
+        color: #9f9f9f;
+      }
+    }
+
+    .right {
+      .boxs {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 15px;
+
+        .box {
+          background-color: var(--dark-bg);
+          border-radius: 10px;
+          padding: 20px;
+          cursor: pointer;
+
+          &.active {
+            background-image: linear-gradient(
+              127deg,
+              $danger-color 0%,
+              $primary-color 91%
+            );
+          }
+
+          &:hover {
+            background-image: linear-gradient(
+              127deg,
+              $danger-color 0%,
+              $primary-color 91%
+            );
+          }
+
+          i {
+            font-size: 40px;
+            color: $primary-color;
+          }
+
+          h4 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            margin-top: 10px;
+          }
+
+          p {
+            color: #c2c2c2;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .services_app {
+    padding: 30px 0;
+
+    .line {
+      flex-direction: column;
+      text-align: center;
+
+      .left,
+      .right {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .services_app {
+    .line {
+      gap: 15px;
+
+      .left {
+        .title {
+          font-size: 22px;
+          margin-bottom: 5px;
+        }
+
+        .desc {
+          margin-bottom: 3px;
+          font-size: 14px;
+        }
+      }
+
+      .right {
+        .boxs {
+          grid-template-columns: 100%;
+
+          .box {
+            padding: 15px;
+
+            i {
+              font-size: 35px;
+            }
+
+            h4 {
+              font-size: 17px;
+              margin-bottom: 1px;
+              margin-top: 5px;
+            }
+
+            p {
+              font-size: 14px;
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// end services_app

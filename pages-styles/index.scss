@@ -423,6 +423,17 @@ $danger-color: #ffa28b;
   background-color: var(--secound-dark-bg);
   color: var(--color-text);
 
+  .red-shadow {
+    position: absolute;
+    z-index: 7;
+    bottom: 1%;
+    left: -11%;
+    padding: 10% 22%;
+    background: linear-gradient(29deg, #722ffb 24%, #ffa28b 75%);
+    -webkit-filter: blur(-138em);
+    filter: blur(12em);
+  }
+
   .line {
     align-items: center;
 
