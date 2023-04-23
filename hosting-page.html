@@ -464,7 +464,7 @@
                     </div>
                     <div class="salary">$75</div>
                     <p>Per User/Month Billed Annuallly</p>
-                    <a href="#" class="btn_start">Get Start</a>
+                    <button class="btn_start">By</button>
                 </div>
                 <div class=" box">
                     <h3 class="title-box">Professional</h3>
@@ -499,7 +499,7 @@
                     </div>
                     <div class="salary">$80</div>
                     <p>Per User/Month Billed Annuallly</p>
-                    <a href="#" class="btn_start">Get Start</a>
+                    <button class="btn_start">By</button>
                 </div>
                 <div class="box">
                     <h3 class="title-box">Enterprise</h3>
@@ -534,11 +534,49 @@
                     </div>
                     <div class="salary">$95</div>
                     <p>Per User/Month Billed Annuallly</p>
-                    <a href="#" class="btn_start">Get Start</a>
+                    <button class="btn_start">By</button>
                 </div>
             </div>
         </div>
       </div>
+
+        <!-- start popup pricing -->
+        <div class="model_pricing">
+          <div class="content">
+            <div class="head">
+              <h4>Pricing details</h4>
+              <i class="fa-solid fa-xmark close-pricing"></i>
+            </div>
+            <form action="" class="">
+              <div class="input_item">
+                <label for="">Your Name</label>
+                <input type="text" placeholder="Name">
+              </div>
+              <div class="input_item">
+                <label for="">Your Email</label>
+                <input type="email" placeholder="Email">
+              </div>
+              <div class="input_item">
+                <label for="">Your Phone</label>
+                <input type="tel" placeholder="Phone">
+              </div>
+              <div class="input_item">
+                <label for="">Package name</label>
+                <select name="" id="">
+                  <option value="">select package</option>
+                  <option value="">Persoanl</option>
+                  <option value="">Professional</option>
+                  <option value="">Enterprise</option>
+                </select>
+              </div>
+            </form>
+            <div class="bottom">
+              <button class="btn_cancel">Cancel</button>
+              <button class="btn_Send">Send</button>
+            </div>
+          </div>
+        </div>
+        <!-- end popup pricing -->
       <!-- end our Pricing -->
 
       <!-- start QUESTION  -->
@@ -787,6 +825,7 @@
             });
         }
         window.addEventListener("resize", () => {
+
             if (innerWidth < 768) {
                 var swiper = new Swiper(".mySwiper", {
                 slidesPerView: 1,
@@ -808,6 +847,18 @@
             }
 
         })
+        
+        const closePricing = document.querySelector(".close-pricing")
+        const popupPricing = document.querySelector(".model_pricing")
+        const openPricing = document.querySelectorAll(".our-pricing .btn_start")
+        const btnCancel = document.querySelector(".btn_cancel")
+
+        openPricing.forEach(item => {
+          item.addEventListener("click", () => popupPricing.classList.add("active"))
+        })
+
+        closePricing.addEventListener("click", () => popupPricing.classList.remove("active"))
+        btnCancel.addEventListener("click", () => popupPricing.classList.remove("active"))
       </script>
     
     <script>

@@ -282,6 +282,7 @@ $danger-color: #ffa28b;
         overflow: hidden;
         transition: 0.3s;
         line-height: 40px;
+        border: none;
       }
     }
   }
@@ -372,6 +373,112 @@ $danger-color: #ffa28b;
     }
   }
 }
+
+// start popup pricing
+.model_pricing {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.235);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    .content {
+      transform: translateY(0);
+    }
+  }
+
+  .content {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    color: #010101;
+    width: 100%;
+    max-width: 400px;
+    transition: all 0.4s;
+    transform: translateY(30px);
+
+    .head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+
+      h4 {
+        font-weight: 700;
+        font-size: 22px;
+        margin-bottom: 0;
+      }
+
+      i {
+        font-size: 20px;
+        cursor: pointer;
+      }
+    }
+
+    form {
+      margin-bottom: 15px;
+
+      .input_item {
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+
+        label {
+          display: block;
+          font-weight: 600;
+          font-size: 17px;
+        }
+
+        input,
+        select {
+          width: 100%;
+          border: 1px solid rgb(194, 196, 208);
+          outline: none;
+          border-radius: 8px;
+          padding: 5px 10px;
+        }
+
+        select {
+          padding: 3px 10px;
+        }
+      }
+    }
+
+    .bottom {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: flex-end;
+
+      button {
+        border: none;
+        border-radius: 6px;
+        padding: 5px 15px;
+      }
+
+      .btn_cancel {
+        background-color: rgb(224 224 224);
+      }
+
+      .btn_Send {
+        background-color: $primary-color;
+        color: white;
+      }
+    }
+  }
+}
+// end popup pricing
+
 // end our-pricing
 
 // start questions_section

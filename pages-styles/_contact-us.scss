@@ -220,6 +220,7 @@ $danger-color: #ffa28b;
 
 @media (max-width: 600px) {
   .form_contact {
+    padding: 30px 0;
     .content {
       .title {
         font-size: 20px;
@@ -254,3 +255,115 @@ $danger-color: #ffa28b;
   }
 }
 // end form_contact
+
+// start location_map
+.location_map {
+  padding: 50px 0;
+
+  .line {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    .left,
+    .right {
+      width: 50%;
+    }
+
+    .left {
+      h4 {
+        font-weight: 700;
+        font-size: 35px;
+        margin-bottom: 0;
+        background-image: linear-gradient(to right, #722ffb, #ffa28b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: 2px;
+      }
+
+      .branches {
+        margin-top: 30px;
+
+        .branche {
+          background-color: var(--secound-dark-bg);
+          padding: 20px;
+          border-radius: 10px;
+
+          &:not(:last-child) {
+            margin-bottom: 20px;
+          }
+          h5 {
+            font-size: 27px;
+          }
+
+          p {
+            margin-bottom: 5px;
+            margin-left: 15px;
+
+            i {
+              color: $primary-color;
+              margin-right: 5px;
+              font-size: 15px;
+            }
+
+            span {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+
+    .right {
+      iframe {
+        height: 500px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .location_map {
+    padding: 30px 0;
+
+    .line {
+      flex-direction: column;
+      gap: 20px;
+
+      .left,
+      .right {
+        width: 100%;
+      }
+
+      .left {
+        text-align: center;
+
+        h4 {
+          font-size: 25px;
+        }
+
+        .branches {
+          margin-top: 15px;
+
+          .branche {
+            padding: 10px;
+
+            h5 {
+              font-size: 20px;
+            }
+
+            p {
+              margin-left: 0;
+
+              i,
+              span {
+                font-size: 13px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// end location_map
