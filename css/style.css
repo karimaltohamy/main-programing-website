@@ -1902,10 +1902,6 @@ footer .line .right .social-media a i {
 .hero .container .content .right {
   width: 50%;
 }
-.hero .container .content .left {
-  -webkit-animation: hero-text 2s ease;
-          animation: hero-text 2s ease;
-}
 .hero .container .content .left .title {
   font-size: 60px;
   font-weight: 700;
@@ -1968,8 +1964,6 @@ footer .line .right .social-media a i {
   position: relative;
 }
 .hero .container .content .right .image {
-  -webkit-animation: hero-img 2s ease;
-          animation: hero-img 2s ease;
   text-align: center;
 }
 .hero .container .content .right .image img {
@@ -2042,7 +2036,7 @@ footer .line .right .social-media a i {
   .hero .container .content .left .title .light-img {
     width: 75px;
     top: -20px;
-    right: -60px;
+    right: -15px;
   }
   .hero .container .content .left .desc {
     font-size: 13px;
